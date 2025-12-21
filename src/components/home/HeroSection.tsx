@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Rocket } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -33,9 +33,9 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-card border border-border/50 rounded-full mb-8 animate-fade-in">
-            <Sparkles className="w-4 h-4 text-primary" />
+            <Rocket className="w-4 h-4 text-primary" />
             <span className="text-sm text-muted-foreground">
-              Your Tech Partner for Success
+              Engineering Excellence, Delivered Fast
             </span>
           </div>
 
@@ -44,12 +44,11 @@ const HeroSection = () => {
             className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-foreground leading-tight mb-6 animate-fade-in"
             style={{ animationDelay: "0.1s" }}
           >
-            We partner with CTO & startup founders
+            Turning Bold Ideas Into
             <br />
             <span className="relative">
-              to make product development{" "}
               <span className="text-primary relative inline-block">
-                weirdly fast
+                Powerful Digital Products
                 <svg
                   className="absolute -bottom-2 left-0 w-full"
                   viewBox="0 0 200 12"
@@ -72,8 +71,8 @@ const HeroSection = () => {
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in"
             style={{ animationDelay: "0.2s" }}
           >
-            Writing code? That's the easy part now. But writing quality code with 
-            exceptional architecture? That's where Techiebutler comes in.
+            We help startups and enterprises build scalable, high-performance 
+            software with clean architecture and future-proof design.
           </p>
 
           {/* CTA Buttons */}
@@ -86,7 +85,7 @@ const HeroSection = () => {
                 size="lg" 
                 className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-8 py-6 text-lg group"
               >
-                Get Started
+                Start Your Project
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
@@ -96,7 +95,7 @@ const HeroSection = () => {
                 variant="outline"
                 className="border-border/50 text-foreground hover:bg-secondary font-semibold px-8 py-6 text-lg"
               >
-                Learn More
+                Explore Our Work
               </Button>
             </Link>
           </div>

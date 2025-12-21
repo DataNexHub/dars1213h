@@ -11,41 +11,41 @@ import { toast } from "sonner";
 const benefits = [
   {
     icon: Zap,
-    title: "Weirdly Fast Delivery",
-    description: "We move so fast you might struggle to keep up with testing",
+    title: "Rapid Development",
+    description: "Agile methodology with weekly sprints and continuous delivery",
   },
   {
     icon: Shield,
-    title: "Quality Architecture",
-    description: "Infrastructure designed to scale without collapsing",
+    title: "Enterprise Security",
+    description: "SOC 2 compliant practices and secure development lifecycle",
   },
   {
     icon: Clock,
-    title: "Transparent Process",
-    description: "No surprises, no scope creep, just results",
+    title: "Transparent Pricing",
+    description: "Fixed-price projects with no hidden costs or surprises",
   },
 ];
 
 const processSteps = [
   {
     step: "01",
-    title: "Discovery Call",
-    description: "We learn about your vision, challenges, and goals. This is where we see if we're a good fit.",
+    title: "Discovery Session",
+    description: "We dive deep into your requirements, goals, and technical landscape to understand your vision.",
   },
   {
     step: "02",
-    title: "Proposal & Planning",
-    description: "You'll receive a clear proposal with timeline, scope, and investment. No hidden costs.",
+    title: "Solution Design",
+    description: "Our architects create a detailed proposal with timeline, technology stack, and investment breakdown.",
   },
   {
     step: "03",
-    title: "Development Sprint",
-    description: "We build fast, communicate often, and deliver incrementally so you see progress daily.",
+    title: "Agile Development",
+    description: "We build in sprints with regular demos, ensuring you see progress and can provide feedback continuously.",
   },
   {
     step: "04",
-    title: "Launch & Beyond",
-    description: "We don't disappear after launch. Ongoing support and optimization is part of our DNA.",
+    title: "Launch & Support",
+    description: "We deploy to production and provide ongoing support, optimization, and feature enhancements.",
   },
 ];
 
@@ -62,7 +62,7 @@ const GetStarted = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Application submitted! We'll review and get back to you within 24 hours.");
+    toast.success("Request submitted! Our team will review and contact you within 24 hours.");
     setFormData({
       name: "",
       email: "",
@@ -88,15 +88,15 @@ const GetStarted = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
-              Let's Build Together
+              Start Your Journey
             </span>
             <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6">
               Ready to Build{" "}
-              <span className="text-primary">Something Great?</span>
+              <span className="text-primary">Something Amazing?</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground">
-              Tell us about your project and we'll show you how we can make 
-              your product development sprint weirdly fast.
+              Tell us about your project and we'll show you how we can bring 
+              your vision to life with world-class engineering.
             </p>
           </div>
         </div>
@@ -133,13 +133,13 @@ const GetStarted = () => {
           <div className="bg-card border border-border/50 rounded-3xl p-8 md:p-10">
             <div className="flex items-center gap-2 mb-2">
               <Calendar className="w-5 h-5 text-primary" />
-              <span className="text-primary font-medium">No-Brainer Call</span>
+              <span className="text-primary font-medium">Free Consultation</span>
             </div>
             <h2 className="text-2xl font-display font-bold text-foreground mb-2">
-              Start Your Project
+              Request a Proposal
             </h2>
             <p className="text-muted-foreground mb-8">
-              Fill out this form and we'll schedule a discovery call to discuss your project.
+              Fill out this form and we'll schedule a discovery call to discuss your project in detail.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -149,7 +149,7 @@ const GetStarted = () => {
                   <Input
                     id="name"
                     name="name"
-                    placeholder="John Doe"
+                    placeholder="John Smith"
                     value={formData.name}
                     onChange={handleChange}
                     required
@@ -157,7 +157,7 @@ const GetStarted = () => {
                   />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email Address *</Label>
+                  <Label htmlFor="email">Work Email *</Label>
                   <Input
                     id="email"
                     name="email"
@@ -172,7 +172,7 @@ const GetStarted = () => {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="company">Company / Startup Name *</Label>
+                <Label htmlFor="company">Company Name *</Label>
                 <Input
                   id="company"
                   name="company"
@@ -195,11 +195,11 @@ const GetStarted = () => {
                     className="w-full h-10 px-3 py-2 bg-background border border-border/50 rounded-md text-foreground"
                   >
                     <option value="">Select type</option>
-                    <option value="mvp">MVP Development</option>
-                    <option value="fullstack">Full-Stack Application</option>
-                    <option value="architecture">System Architecture</option>
-                    <option value="audit">Code Audit</option>
-                    <option value="augmentation">Team Augmentation</option>
+                    <option value="web-app">Web Application</option>
+                    <option value="mobile-app">Mobile App</option>
+                    <option value="enterprise">Enterprise Software</option>
+                    <option value="cloud">Cloud Migration</option>
+                    <option value="api">API Development</option>
                     <option value="other">Other</option>
                   </select>
                 </div>
@@ -213,21 +213,21 @@ const GetStarted = () => {
                     className="w-full h-10 px-3 py-2 bg-background border border-border/50 rounded-md text-foreground"
                   >
                     <option value="">Select timeline</option>
-                    <option value="asap">ASAP</option>
-                    <option value="1-2weeks">1-2 Weeks</option>
-                    <option value="1month">1 Month</option>
-                    <option value="2-3months">2-3 Months</option>
+                    <option value="1-2months">1-2 Months</option>
+                    <option value="3-6months">3-6 Months</option>
+                    <option value="6-12months">6-12 Months</option>
+                    <option value="ongoing">Ongoing Partnership</option>
                     <option value="flexible">Flexible</option>
                   </select>
                 </div>
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="description">Tell Us About Your Project *</Label>
+                <Label htmlFor="description">Project Description *</Label>
                 <Textarea
                   id="description"
                   name="description"
-                  placeholder="What are you building? What problem are you solving? What's your current situation?"
+                  placeholder="Describe your project, goals, and any specific requirements..."
                   value={formData.description}
                   onChange={handleChange}
                   required
@@ -241,12 +241,12 @@ const GetStarted = () => {
                 size="lg"
                 className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold group"
               >
-                Submit Application
+                Submit Request
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
 
               <p className="text-center text-muted-foreground text-sm">
-                We'll respond within 24 hours. Usually much faster.
+                We typically respond within 24 hours during business days.
               </p>
             </form>
           </div>
@@ -254,7 +254,7 @@ const GetStarted = () => {
           {/* Process */}
           <div>
             <h2 className="text-2xl font-display font-bold text-foreground mb-8">
-              How It Works
+              Our Process
             </h2>
             <div className="space-y-6">
               {processSteps.map((step, index) => (
@@ -280,15 +280,15 @@ const GetStarted = () => {
             {/* What You Get */}
             <div className="mt-10 p-6 bg-primary/5 border border-primary/20 rounded-2xl">
               <h3 className="font-semibold text-foreground mb-4">
-                What You Get With Every Project
+                What's Included in Every Engagement
               </h3>
               <ul className="space-y-3">
                 {[
-                  "Direct access to senior engineers",
-                  "Daily progress updates",
-                  "Clean, documented code",
-                  "Architecture that scales",
-                  "Post-launch support",
+                  "Dedicated project manager and tech lead",
+                  "Weekly progress reports and demos",
+                  "Full source code ownership",
+                  "Comprehensive documentation",
+                  "90-day post-launch support",
                 ].map((item, index) => (
                   <li key={index} className="flex items-center gap-3 text-muted-foreground">
                     <Check className="w-5 h-5 text-primary flex-shrink-0" />
