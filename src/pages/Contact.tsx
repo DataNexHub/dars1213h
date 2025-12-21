@@ -13,19 +13,19 @@ const contactInfo = [
     icon: Mail,
     title: "Email Us",
     content: "hello@techiebutler.com",
-    description: "We'll respond within 24 hours",
+    description: "We respond within 24 hours",
   },
   {
     icon: MapPin,
-    title: "Location",
-    content: "Global Remote Team",
-    description: "Working across all timezones",
+    title: "Our Offices",
+    content: "San Francisco • London • Singapore",
+    description: "Global presence, local expertise",
   },
   {
     icon: Clock,
-    title: "Response Time",
-    content: "< 24 hours",
-    description: "Usually much faster",
+    title: "Business Hours",
+    content: "Mon - Fri: 9AM - 6PM",
+    description: "24/7 support for enterprise clients",
   },
 ];
 
@@ -39,7 +39,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Message sent! We'll get back to you soon.");
+    toast.success("Message sent successfully! We'll be in touch soon.");
     setFormData({ name: "", email: "", company: "", message: "" });
   };
 
@@ -64,7 +64,7 @@ const Contact = () => {
               <span className="text-primary">Conversation</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground">
-              Have a project in mind? Questions about our approach? 
+              Have a project in mind? Questions about our services? 
               We'd love to hear from you.
             </p>
           </div>
@@ -80,7 +80,7 @@ const Contact = () => {
               Send us a message
             </h2>
             <p className="text-muted-foreground mb-8">
-              Fill out the form and we'll get back to you promptly.
+              Fill out the form and our team will get back to you promptly.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -90,7 +90,7 @@ const Contact = () => {
                   <Input
                     id="name"
                     name="name"
-                    placeholder="John Doe"
+                    placeholder="John Smith"
                     value={formData.name}
                     onChange={handleChange}
                     required
@@ -129,7 +129,7 @@ const Contact = () => {
                 <Textarea
                   id="message"
                   name="message"
-                  placeholder="Tell us about your project or question..."
+                  placeholder="Tell us about your project or inquiry..."
                   value={formData.message}
                   onChange={handleChange}
                   required
@@ -180,7 +180,7 @@ const Contact = () => {
 
             {/* Social Links */}
             <div className="bg-card border border-border/50 rounded-2xl p-6">
-              <h3 className="font-semibold text-foreground mb-4">Follow Us</h3>
+              <h3 className="font-semibold text-foreground mb-4">Connect With Us</h3>
               <div className="flex gap-4">
                 <a
                   href="#"

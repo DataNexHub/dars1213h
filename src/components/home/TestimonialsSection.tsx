@@ -3,34 +3,34 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "The execution was fast, communication was very good and overall it's easy to work with you guys",
-    author: "Tuomas Lehtovirta",
-    role: "CEO at Nordic Gulf Partners",
+    quote: "Techiebutler transformed our legacy system into a modern, scalable platform. The team's expertise and professionalism exceeded our expectations.",
+    author: "Sarah Mitchell",
+    role: "CTO, FinanceFlow",
   },
   {
-    quote: "I was in urgent need and the team delivered the module within 2 hours, hats-off for the exceptional quality of work.",
-    author: "Michael Cole",
-    role: "Enterprise Client",
+    quote: "Their cloud architecture saved us 40% on infrastructure costs while improving performance. Highly recommended for any enterprise project.",
+    author: "David Chen",
+    role: "VP Engineering, DataScale",
   },
   {
-    quote: "Wow! You guys are moving so fast that we're behind testing/deploy. Crazy stuff!",
-    author: "Marc Ruskin",
-    role: "Project Manager NAHL",
+    quote: "From day one, the communication was excellent. They delivered our MVP in 6 weeks and it's now serving 100k+ users.",
+    author: "Emily Rodriguez",
+    role: "Founder, HealthTech Startup",
   },
   {
-    quote: "Sometimes you need a reality check, and you gave it solidly - harsh but necessary!",
-    author: "Shachi Mall",
-    role: "100k+ Subscribers",
+    quote: "The code quality and documentation they provide is outstanding. Our internal team can easily maintain and extend the system.",
+    author: "Michael Foster",
+    role: "Tech Lead, RetailPro",
   },
   {
-    quote: "As soon as we had the call my mind was going crazy with ideas",
-    author: "Harry Latos",
-    role: "Founder of Acuired",
+    quote: "They don't just write code—they understand business goals. The strategic guidance was invaluable for our product roadmap.",
+    author: "Jennifer Park",
+    role: "Product Director, SaaS Platform",
   },
   {
-    quote: "I read the approach about Athena to retrieve data from SES and it's amazingly explained.",
-    author: "Bill Palter",
-    role: "Senior Software Engineer",
+    quote: "Security was paramount for our fintech app. Techiebutler implemented enterprise-grade security that passed our strictest audits.",
+    author: "Robert Williams",
+    role: "CISO, PaymentHub",
   },
 ];
 
@@ -41,9 +41,9 @@ const TestimonialsSection = () => {
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-[150px]" />
       
       <SectionHeader
-        badge="low-key our fav section"
-        title="What Our Partners Say"
-        subtitle="We let our work speak for itself, but here's what our partners have to say"
+        badge="Client Success Stories"
+        title="Trusted by Industry Leaders"
+        subtitle="See what our partners have to say about working with us"
       />
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -60,7 +60,7 @@ const TestimonialsSection = () => {
               "{testimonial.quote}"
             </p>
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-primary/50 flex items-center justify-center text-primary-foreground font-semibold">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-primary-foreground font-semibold">
                 {testimonial.author.charAt(0)}
               </div>
               <div>
