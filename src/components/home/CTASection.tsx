@@ -21,16 +21,20 @@ const CTASection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/get-started">
+            <a
+              href="https://calendly.com/voratech"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 size="lg"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-8 py-6 text-lg group"
               >
                 <MessageSquare className="mr-2 w-5 h-5" />
-                Schedule a Consultation
+                Book a Call
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-            </Link>
+            </a>
             <Link to="/contact">
               <Button
                 size="lg"

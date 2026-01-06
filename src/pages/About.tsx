@@ -43,7 +43,7 @@ const About = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
-              About Techiebutler
+              About Voratech
             </span>
             <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6">
               Engineering Excellence{" "}
@@ -68,7 +68,7 @@ const About = () => {
             />
             <div className="space-y-6 text-muted-foreground">
               <p>
-                Techiebutler was founded with a simple belief: 
+                Voratech was founded with a simple belief: 
                 <span className="text-foreground font-medium"> great software should empower businesses, not hold them back</span>.
               </p>
               <p>

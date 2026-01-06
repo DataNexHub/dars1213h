@@ -142,6 +142,22 @@ const GetStarted = () => {
               Fill out this form and we'll schedule a discovery call to discuss your project in detail.
             </p>
 
+            {/* Calendly Embed */}
+            <div className="mb-8 p-4 bg-primary/5 border border-primary/20 rounded-xl">
+              <p className="text-muted-foreground text-sm mb-3">
+                Prefer to schedule directly? Book a free consultation call:
+              </p>
+              <a
+                href="https://calendly.com/voratech"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors"
+              >
+                <Calendar className="w-4 h-4" />
+                Schedule on Calendly →
+              </a>
+            </div>
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">

@@ -10,13 +10,12 @@ const Footer = () => {
           <div className="md:col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-4">
               <span className="text-2xl font-display font-bold text-foreground">
-                TECHIE<span className="text-primary">BUTLER</span>
+                VORA<span className="text-primary">TECH</span>
               </span>
-              <span className="text-primary text-2xl">+</span>
             </Link>
             <p className="text-muted-foreground mb-6 max-w-md">
-              We partner with CTO & startup founders to make product development 
-              sprint weirdly fast. Quality code, exceptional architecture.
+              We partner with CTOs & startup founders to build scalable software 
+              with expert system design and architecture.
             </p>
             <div className="flex gap-4">
               <a
@@ -72,7 +71,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-muted-foreground">
                 <Mail size={16} className="text-primary" />
-                hello@techiebutler.com
+                hello@voratech.com
               </li>
               <li className="flex items-center gap-2 text-muted-foreground">
                 <MapPin size={16} className="text-primary" />
@@ -84,7 +83,7 @@ const Footer = () => {
 
         <div className="border-t border-border/50 mt-12 pt-8 text-center">
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} Techiebutler. All rights reserved.
+            © {new Date().getFullYear()} Voratech. All rights reserved.
           </p>
         </div>
       </div>
