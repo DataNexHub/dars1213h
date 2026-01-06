@@ -22,9 +22,8 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
             <span className="text-2xl font-display font-bold text-foreground">
-              TECHIE<span className="text-primary">BUTLER</span>
+              VORA<span className="text-primary">TECH</span>
             </span>
-            <span className="text-primary text-2xl">+</span>
           </Link>
 
           {/* Desktop Navigation */}

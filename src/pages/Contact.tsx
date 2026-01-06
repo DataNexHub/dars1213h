@@ -12,7 +12,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    content: "hello@techiebutler.com",
+    content: "hello@voratech.com",
     description: "We respond within 24 hours",
   },
   {
