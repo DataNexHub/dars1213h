@@ -1,26 +1,59 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MessageSquare } from "lucide-react";
+import { ArrowRight, Calendar, Zap } from "lucide-react";
+import { motion } from "framer-motion";
+import Particles from "@/components/ui/particles";
 
 const CTASection = () => {
   return (
     <section className="relative py-32 overflow-hidden">
+      {/* Particles */}
+      <Particles quantity={40} />
+
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-background" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[200px]" />
+      <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-background to-background" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/30 rounded-full blur-[200px]" />
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6">
-            Let's Build Your{" "}
-            <span className="text-primary">Next Big Thing</span>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="max-w-4xl mx-auto text-center"
+        >
+          {/* Badge */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
+            className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/30 rounded-full mb-8"
+          >
+            <Zap className="w-4 h-4 text-primary" />
+            <span className="text-sm font-medium text-primary">
+              Ready When You Are
+            </span>
+          </motion.div>
+
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-foreground mb-6">
+            Your Next Chapter
+            <br />
+            <span className="text-primary">Starts Here</span>
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground mb-10">
-            Whether you're launching a startup or scaling an enterprise, 
-            we're ready to turn your vision into reality with cutting-edge technology.
+
+          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Whether you're building from scratch or scaling to millions—
+            we're ready to make it happen.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.2 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+          >
             <a
               href="https://calendly.com/voratech"
               target="_blank"
@@ -28,10 +61,10 @@ const CTASection = () => {
             >
               <Button
                 size="lg"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-8 py-6 text-lg group"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-10 py-7 text-lg group shadow-lg shadow-primary/25"
               >
-                <MessageSquare className="mr-2 w-5 h-5" />
-                Book a Call
+                <Calendar className="mr-2 w-5 h-5" />
+                Book Your Free Call
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </a>
@@ -39,13 +72,31 @@ const CTASection = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-primary/50 text-foreground hover:bg-primary/10 font-semibold px-8 py-6 text-lg"
+                className="border-primary/50 text-foreground hover:bg-primary/10 font-semibold px-10 py-7 text-lg"
               >
-                Contact Us
+                Send a Message
               </Button>
             </Link>
-          </div>
-        </div>
+          </motion.div>
+
+          {/* Trust Badges */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-16 pt-12 border-t border-border/30"
+          >
+            <p className="text-sm text-muted-foreground mb-6">Trusted by innovative teams at</p>
+            <div className="flex flex-wrap justify-center gap-8 md:gap-12 opacity-50">
+              {["Startup A", "TechCorp", "Innovate Inc", "Growth Labs", "Scale Co"].map((company, i) => (
+                <span key={i} className="text-muted-foreground font-medium text-lg">
+                  {company}
+                </span>
+              ))}
+            </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
