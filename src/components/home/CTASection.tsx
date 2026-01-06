@@ -1,18 +1,21 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Calendar, Zap } from "lucide-react";
+import { ArrowRight, Calendar, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import Particles from "@/components/ui/particles";
 
 const CTASection = () => {
   return (
-    <section className="relative py-32 overflow-hidden">
+    <section className="relative py-32 overflow-hidden noise">
       {/* Particles */}
-      <Particles quantity={40} />
+      <Particles quantity={50} />
 
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-background to-background" />
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/30 rounded-full blur-[200px]" />
+      {/* Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-mesh" />
+      
+      {/* Animated Orbs */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/30 rounded-full blur-[200px] animate-pulse-glow" />
+      <div className="absolute top-1/2 left-1/4 w-[300px] h-[300px] bg-secondary/20 rounded-full blur-[150px] animate-pulse-glow" style={{ animationDelay: '1s' }} />
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
@@ -28,18 +31,18 @@ const CTASection = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/30 rounded-full mb-8"
+            className="inline-flex items-center gap-2 px-5 py-2.5 glass rounded-full mb-8 border border-primary/30"
           >
-            <Zap className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">
+            <Sparkles className="w-4 h-4 text-accent" />
+            <span className="text-sm font-medium text-accent">
               Ready When You Are
             </span>
           </motion.div>
 
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-foreground mb-6">
-            Your Next Chapter
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-extrabold mb-6">
+            <span className="text-foreground">Your Next Chapter</span>
             <br />
-            <span className="text-primary">Starts Here</span>
+            <span className="text-gradient">Starts Here</span>
           </h2>
 
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl mx-auto">
@@ -61,7 +64,7 @@ const CTASection = () => {
             >
               <Button
                 size="lg"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-10 py-7 text-lg group shadow-lg shadow-primary/25"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-10 py-7 text-lg group glow-primary transition-all duration-300 hover:shadow-glow-lg"
               >
                 <Calendar className="mr-2 w-5 h-5" />
                 Book Your Free Call
@@ -72,7 +75,7 @@ const CTASection = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-primary/50 text-foreground hover:bg-primary/10 font-semibold px-10 py-7 text-lg"
+                className="border-secondary/50 text-foreground hover:border-secondary hover:bg-secondary/10 font-semibold px-10 py-7 text-lg transition-all duration-300"
               >
                 Send a Message
               </Button>
@@ -85,14 +88,22 @@ const CTASection = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-16 pt-12 border-t border-border/30"
+            className="mt-20 pt-12 border-t border-border/30"
           >
-            <p className="text-sm text-muted-foreground mb-6">Trusted by innovative teams at</p>
-            <div className="flex flex-wrap justify-center gap-8 md:gap-12 opacity-50">
-              {["Startup A", "TechCorp", "Innovate Inc", "Growth Labs", "Scale Co"].map((company, i) => (
-                <span key={i} className="text-muted-foreground font-medium text-lg">
+            <p className="text-sm text-muted-foreground mb-8">Trusted by innovative teams worldwide</p>
+            <div className="flex flex-wrap justify-center gap-8 md:gap-14">
+              {["TechFlow", "DataScale", "CloudFirst", "Innovate", "GrowthLabs"].map((company, i) => (
+                <motion.span 
+                  key={i}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 0.4 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.5 + i * 0.1 }}
+                  whileHover={{ opacity: 1 }}
+                  className="text-muted-foreground font-medium text-lg transition-opacity cursor-default"
+                >
                   {company}
-                </span>
+                </motion.span>
               ))}
             </div>
           </motion.div>

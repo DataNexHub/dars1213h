@@ -18,14 +18,18 @@ const solutions = [
 
 const WhyUsSection = () => {
   return (
-    <Section className="bg-card relative overflow-hidden">
+    <Section className="relative overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-[0.02]">
         <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--primary)) 1px, transparent 0)`,
-          backgroundSize: '40px 40px',
+          backgroundImage: `radial-gradient(circle at 2px 2px, hsl(var(--foreground)) 1px, transparent 0)`,
+          backgroundSize: '32px 32px',
         }} />
       </div>
+
+      {/* Gradient Orbs */}
+      <div className="absolute top-0 right-1/4 w-[300px] h-[300px] bg-destructive/10 rounded-full blur-[120px]" />
+      <div className="absolute bottom-0 left-1/4 w-[300px] h-[300px] bg-primary/10 rounded-full blur-[120px]" />
 
       <div className="relative z-10">
         <SectionHeader
@@ -44,7 +48,7 @@ const WhyUsSection = () => {
             className="space-y-4"
           >
             <h3 className="text-xl font-display font-semibold text-foreground mb-6 flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-destructive/10 flex items-center justify-center">
+              <div className="w-12 h-12 rounded-full bg-destructive/10 flex items-center justify-center border border-destructive/30">
                 <X className="w-5 h-5 text-destructive" />
               </div>
               Sound Familiar?
@@ -56,7 +60,7 @@ const WhyUsSection = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="flex items-center gap-4 p-5 bg-background/50 rounded-xl border border-destructive/20 group hover:border-destructive/40 transition-colors"
+                className="flex items-center gap-4 p-5 glass rounded-xl border border-destructive/20 group hover:border-destructive/40 transition-all duration-300"
               >
                 <X className="w-5 h-5 text-destructive flex-shrink-0" />
                 <p className="text-muted-foreground group-hover:text-foreground transition-colors">{item}</p>
@@ -73,7 +77,7 @@ const WhyUsSection = () => {
             className="space-y-4"
           >
             <h3 className="text-xl font-display font-semibold text-foreground mb-6 flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center border border-primary/30 glow-primary">
                 <Check className="w-5 h-5 text-primary" />
               </div>
               The Voratech Way
@@ -86,7 +90,7 @@ const WhyUsSection = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 whileHover={{ x: 8 }}
-                className="flex items-center gap-4 p-5 bg-primary/5 rounded-xl border border-primary/20 group hover:border-primary/40 transition-all cursor-default"
+                className="flex items-center gap-4 p-5 glass rounded-xl border border-primary/20 group hover:border-primary/50 hover:shadow-glow-sm transition-all duration-300 cursor-default"
               >
                 <Check className="w-5 h-5 text-primary flex-shrink-0" />
                 <p className="text-foreground flex-1">{item}</p>
